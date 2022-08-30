@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class BasketPage {
 
     public BasketPage(){
-
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -23,10 +22,6 @@ public class BasketPage {
 
     @FindBy(xpath = "  (//h2[@class='title'])[1]")
     public WebElement emptyBasketText;
-
-
-
-
 
 
 }

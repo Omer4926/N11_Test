@@ -14,12 +14,7 @@ public class ProductPage {
     @FindBy(xpath = "(//button[@class='addBasketUnify'])[1]")
     public WebElement addToCart;
 
-
-
     @FindBy(xpath = "//i[@class='iconsBasketWhite']")
     public WebElement cart;
-
-
-
 
 }

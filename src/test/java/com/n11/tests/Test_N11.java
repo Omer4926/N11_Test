@@ -24,28 +24,24 @@ public class Test_N11 {
         BasketPage basketPage = new BasketPage();
         ProfilePage profilePage = new ProfilePage();
 
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),15);
 
-        WebElement cokies = Driver.getDriver().findElement(By.xpath("//*[@id='cookieUsagePopIn']//span[1]"));
-        wait.until(ExpectedConditions.elementToBeClickable(cokies));
-        cokies.click();
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
+        WebElement cookies = Driver.getDriver().findElement(By.xpath("//*[@id='cookieUsagePopIn']//span[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable(cookies));
+        cookies.click();
 
         basePage.loginButton.click();
-
-
 
         wait.until(ExpectedConditions.visibilityOf(loginPage.userName));
         loginPage.userName.sendKeys(ConfigurationReader.getProperty("username"));
 
         loginPage.password.sendKeys(ConfigurationReader.getProperty("password"));
 
-
         wait.until(ExpectedConditions.elementToBeClickable(loginPage.loginButton));
-
         loginPage.loginButton.click();
-
 
         wait.until(ExpectedConditions.visibilityOf(homePage.profileImage));
         homePage.profileImage.click();
@@ -83,16 +79,6 @@ public class Test_N11 {
         String expectedText ="Sepetin Boş Görünüyor";
 
         Assert.assertEquals(actualText ,expectedText);
-
-
-
-
-
-
-
-
-
-
 
     }
 
